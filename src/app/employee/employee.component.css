@@ -1,0 +1,11 @@
+.form-control {
+    width:50%;
+}
+.btn-change {
+    font-size: 1rem;
+}
+@media screen and (max-width:560px) {
+    .btn-change {
+        font-size: 7px;
+    }
+}

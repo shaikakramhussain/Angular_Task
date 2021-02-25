@@ -1,0 +1,40 @@
+<div class="container">
+  <h2>Assignment</h2>
+  <hr>
+  <form [formGroup]=employeeForm (ngSubmit)='submitEmpData(employeeForm.value)'>
+    <div class="form-group">
+      <label>Id :</label>
+      <input type="text" formControlName="id" class="form-control" placeholder="Enter id">
+    </div>
+    <div class="form-group">
+      <label>Name :</label>
+      <input type="text" formControlName="name" class="form-control" placeholder="Enter name">
+    </div>
+    <div class="form-group">
+      <label>Designation :</label>
+      <input type="text" formControlName="designation" class="form-control" placeholder="Enter designation">
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>&nbsp;&nbsp;
+    <button class="btn btn-primary" type="button" (click)='updateEmpData(this.employeeForm.value)'>Update</button>
+  </form>
+  <hr>
+  <h2>Employee Details</h2>
+  <hr>
+  <table class="table table-bordered table-hover">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Designation</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let data of getEmployeeData">
+      <td>{{data.id}}</td>
+      <td>{{data.name}}</td>
+      <td>{{data.designation}}</td>
+      <td>
+        <button class="btn btn-info btn-change" (click)="editEmployeeData(data)">Edit</button>&nbsp;
+        <button class="btn btn-danger btn-change" (click)='deleteEmployee(data.id)'>Delete</button>
+      </td>
+    </tr>
+  </table>
+</div>

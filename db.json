@@ -1,0 +1,24 @@
+{
+  "employeeDetail": [
+    {
+      "id": "1",
+      "name": "Andrew",
+      "designation": "System Engineer"
+    },
+    {
+      "name": "Charles",
+      "id": "2",
+      "designation": "Software Engineer"
+    },
+    {
+      "name": "Abigail",
+      "id": "3",
+      "designation": "Jr. Test Engineer"
+    },
+    {
+      "id": "4",
+      "name": "Shaik",
+      "designation": "Software Engineer"
+    }
+  ]
+}
